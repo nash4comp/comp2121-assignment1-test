@@ -1,5 +1,5 @@
 #include <stdio.h>
-#define N 50
+#define N 3
 
 int main() {
   int counter = 500;
@@ -11,18 +11,17 @@ int main() {
       counter += 22;
       for (int k = j + 1; k <= n; k++) {
         counter += 33;
-//        printf("%d %d %d %d\n",i,j, k,n);
         cnt++;
       }
     }
   }
   printf("counter: %d\n", counter);
-  printf("k cnt: %d\n", cnt);
 
   int iValue = (N+10)*11;
   int jValue = ((((2*N)+30)*(((2*N)+30)-1)/2) - ((N+20)*(N+20-1)/2))*22;
-  int kValue = 0;
+  int kValue = (N)*(N-1)*(N-2)/3/2*33;
   int myAnswer = 500 + iValue + jValue + kValue;
   printf("myAnswer: %d\n", myAnswer);
+
   return 0;
 }
